@@ -206,7 +206,7 @@ public:
 	template<typename T>
 	T *construct(size_t n = 1)
 	{
-		T *p = static_cast<T*>(alloc(n));
+		T *p = static_cast<T*>(alloc(n * sizeof(T)));
 		attach(p, (Callback)internal::generic_cleanup<T>);
 		return ::new(p) T();
 	}
