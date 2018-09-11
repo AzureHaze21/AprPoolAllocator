@@ -32,8 +32,8 @@ namespace internal
 	static apr_status_t delete_object(void *t)
 	{
 		reinterpret_cast<T*>(t)->~T();
-
 		operator delete(t);
+		
 		return APR_SUCCESS;
 	}
 
