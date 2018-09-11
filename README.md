@@ -53,7 +53,7 @@ You can specify a ```cleanup function``` when attaching an already allocated obj
 ```cpp
 apr_status_t my_cleanup_function(void *data)
 {
-  reintepret_cast<MyObject*>(data)->~MyObject();
+  reinterpret_cast<MyObject*>(data)->~MyObject();
   delete MyObject;
   return APR_SUCCESS;
 }
