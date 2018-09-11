@@ -25,7 +25,7 @@ MyObject *o = poolNew(p, o, 1, 2, 3);
 
 ### Getting an allocator
 
-Allocators must be initialized from already existing memory pools by calling the specific constructor or with the ```getAllocator()``` method.
+Allocators must be initialized from already existing memory pools by calling the specific constructor or using the ```getAllocator()``` method.
 
 ```cpp
 Pool p;
