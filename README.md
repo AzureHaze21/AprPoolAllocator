@@ -5,6 +5,18 @@ C++ wrapper for APR pools
 
 ```apr_initialize()``` must be called before using any APR lib and ```apr_terminate()``` when you're done.
 
+### Creating objects
+
+```cpp
+Pool p;
+
+int *i = p.construct<int>(45);
+char *str = p("string");
+MyObject *o = p.construct<MyObject>();
+void *mem = p.alloc(20);
+
+```
+
 ### Getting an allocator
 
 Allocators must be initialized from already existing memory pools by calling the specific constructor or with the ```getAllocator()``` method.
