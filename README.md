@@ -15,6 +15,12 @@ char *str = p("string");
 MyObject *o = p.construct<MyObject>();
 void *mem = p.alloc(20);
 
+/* or with the macro poolNew(p, obj, ...) */
+
+struct MyObject {  MyObject(int a, int b, int c) {} };
+
+MyObject *o = poolNew(p, o, 1, 2, 3);
+
 ```
 
 ### Getting an allocator
