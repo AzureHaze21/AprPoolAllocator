@@ -240,4 +240,6 @@ public:
 	}
 };
 
+#define poolNew(pool, obj, ...) (pool.construct<std::remove_pointer<decltype(obj)>::type>(__VA_ARGS__))
+
 #endif
